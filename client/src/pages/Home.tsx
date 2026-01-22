@@ -57,15 +57,12 @@ export default function Home() {
                   <span className="text-gradient">UFBA</span>
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-lg leading-relaxed font-medium">
-                  Força, coragem e lealdade. Somos a atlética da Escola de Administração da UFBA, representando Administração, Secretariado, Administração Pública e APGS.
+                  Força, coragem e lealdade. Somos a atlética da Escola de Administração da UFBA, representando os cursos de Administração, Secretariado Executivo e Administração Pública e Gestão Social.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button className="bg-primary hover:bg-primary/90 text-white gap-2 h-12 px-8 font-semibold button-glow shadow-lg">
                   Conheça Nossos Eventos <ArrowRight className="w-4 h-4" />
-                </Button>
-                <Button variant="outline" className="border-2 border-primary text-primary hover:bg-muted h-12 px-8 font-semibold">
-                  Sócio-Torcedor
                 </Button>
               </div>
             </div>
