@@ -43,10 +43,11 @@
 }
 
 :root {
-  /* Clean Modern Design System */
+  /* Balanced Design: Clean + Sophisticated + Impactful */
   /* Primary: Electric Blue (#0066FF) - Professional, Trustworthy */
   /* Secondary: Gold (#FFD700) - Energy, Celebration, Highlight */
-  /* Background: Light Off-White (#F8F9FA) - Clean, Modern */
+  /* Background: White (#FFFFFF) - Clean, Modern */
+  /* Accent: Light Blue (#F0F4FF) - Subtle, Sophisticated */
   
   --primary: #0066FF;
   --primary-foreground: #FFFFFF;
@@ -57,8 +58,8 @@
   --chart-3: #00D9FF;
   --chart-4: #FF6B35;
   --chart-5: #FFB700;
-  --radius: 0.65rem;
-  --background: #F8F9FA;
+  --radius: 0.75rem;
+  --background: #FFFFFF;
   --foreground: #1A1A2E;
   --card: #FFFFFF;
   --card-foreground: #1A1A2E;
@@ -66,14 +67,14 @@
   --popover-foreground: #1A1A2E;
   --secondary: #FFD700;
   --secondary-foreground: #1A1A2E;
-  --muted: #E5E7EB;
+  --muted: #F0F4FF;
   --muted-foreground: #6B7280;
-  --accent: #FFD700;
-  --accent-foreground: #1A1A2E;
+  --accent: #0066FF;
+  --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
   --border: #E5E7EB;
-  --input: #F3F4F6;
+  --input: #F9FAFB;
   --ring: #0066FF;
   --sidebar: #FFFFFF;
   --sidebar-foreground: #1A1A2E;
@@ -84,12 +85,12 @@
 }
 
 .dark {
-  /* Dark theme - same as root for Clean Design */
+  /* Dark theme - same as root for Balanced Design */
   --primary: #0066FF;
   --primary-foreground: #FFFFFF;
   --sidebar-primary: #0052CC;
   --sidebar-primary-foreground: #FFFFFF;
-  --background: #F8F9FA;
+  --background: #FFFFFF;
   --foreground: #1A1A2E;
   --card: #FFFFFF;
   --card-foreground: #1A1A2E;
@@ -97,14 +98,14 @@
   --popover-foreground: #1A1A2E;
   --secondary: #FFD700;
   --secondary-foreground: #1A1A2E;
-  --muted: #E5E7EB;
+  --muted: #F0F4FF;
   --muted-foreground: #6B7280;
-  --accent: #FFD700;
-  --accent-foreground: #1A1A2E;
+  --accent: #0066FF;
+  --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
   --border: #E5E7EB;
-  --input: #F3F4F6;
+  --input: #F9FAFB;
   --ring: #0066FF;
   --chart-1: #0066FF;
   --chart-2: #FFD700;
@@ -273,6 +274,103 @@
   }
 
   .gradient-accent-text {
+    background: linear-gradient(135deg, #0066FF 0%, #FFD700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Sophisticated Design Elements */
+  .section-accent-bg {
+    background: linear-gradient(135deg, #F0F4FF 0%, #FFFFFF 100%);
+  }
+
+  .card-elevated {
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.08);
+    border: 1px solid rgba(0, 102, 255, 0.1);
+  }
+
+  .card-elevated:hover {
+    box-shadow: 0 12px 32px rgba(0, 102, 255, 0.15);
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+  }
+
+  .accent-line {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+
+  .accent-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #0066FF 0%, #FFD700 100%);
+    border-radius: 2px;
+  }
+
+  .badge-accent {
+    background: linear-gradient(135deg, #F0F4FF 0%, #E3F2FD 100%);
+    border: 1px solid #0066FF;
+    color: #0066FF;
+  }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #F0F4FF 0%, #E3F2FD 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0066FF;
+  }
+
+  .icon-box-accent {
+    background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
+    color: #1A1A2E;
+  }
+
+  .stat-number {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #0066FF 0%, #FFD700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .divider-accent {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0066FF, transparent);
+    margin: 2rem 0;
+  }
+
+  .hero-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+    pointer-events: none;
+  }
+
+  .button-glow:hover {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+  }
+
+  .text-gradient {
     background: linear-gradient(135deg, #0066FF 0%, #FFD700 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
