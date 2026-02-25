@@ -16,12 +16,12 @@ export default function Home() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen bg-white text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
+      <nav className="sticky top-0 z-50 bg-card border-b border-border shadow-sm">
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-lg">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-lg">P</span>
             </div>
             <div className="hidden sm:flex flex-col">
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 section-accent-bg border-y border-border">
+      <section className="py-16 bg-gradient-to-br from-card to-muted border-y border-border">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -170,7 +170,7 @@ export default function Home() {
       </section>
 
       {/* Esportes Section */}
-      <section id="esportes" className="py-24 section-accent-bg">
+      <section id="esportes" className="py-24 bg-gradient-to-br from-card to-muted">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -188,7 +188,7 @@ export default function Home() {
                   { sport: "Jiu Jitsu", description: "Treinos e competições de Jiu Jitsu" },
                   { sport: "Outros Esportes", description: "Participação em diversos eventos esportivos" },
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4 p-4 rounded-lg bg-white border border-border hover:shadow-md transition-all">
+                  <div key={i} className="flex gap-4 p-4 rounded-lg bg-card border border-border hover:shadow-md transition-all">
                     <div className="icon-box flex-shrink-0">
                       <Trophy className="w-6 h-6" />
                     </div>
@@ -262,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* Contato Section */}
-      <section id="contato" className="py-24 section-accent-bg">
+      <section id="contato" className="py-24 bg-gradient-to-br from-card to-muted">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-16">
             <h2 className="text-5xl font-black mb-4 text-foreground">
@@ -307,7 +307,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border bg-white">
+      <footer className="py-8 border-t border-border bg-card">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
